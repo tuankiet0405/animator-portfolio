@@ -1,0 +1,131 @@
+/* ===== Dev-Friendly Section ===== */
+.dev-friendly {
+  padding: var(--space-12) 0;
+}
+
+/* Promise Cards */
+.dev-friendly__promises {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  max-width: 1000px;
+  margin: 0 auto var(--space-10);
+}
+
+.promise-card {
+  padding: var(--space-4);
+  background: var(--card-bg);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.promise-card__icon {
+  width: 64px;
+  height: 64px;
+}
+
+.promise-card__icon .dev-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.promise-card__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.promise-card__desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* File Size Chart */
+.dev-friendly__chart {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--space-4);
+  background: var(--card-bg);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard-lg);
+}
+
+.dev-friendly__chart-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+  text-align: center;
+}
+
+.chart__bars {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.bar {
+  display: grid;
+  grid-template-columns: 60px 1fr 70px;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.bar__label {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.bar__track {
+  height: 28px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.bar__fill {
+  height: 100%;
+  will-change: transform;
+}
+
+.bar__fill--highlight {
+  position: relative;
+}
+
+.bar__fill--highlight::after {
+  content: '⭐';
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+}
+
+.bar__number {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dev-friendly__promises {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "animator-portfolio",
+  "description": "Interactive Geometric Playground — A vector motion animator portfolio built with React, GSAP, and Lottie. Features mouse-reactive parallax, scroll-driven animations, 3D tilt cards, canvas particles, and Neo-Brutalism design.",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "gsap": "^3.12.7",
+    "@gsap/react": "^2.1.1",
+    "lottie-react": "^2.4.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.5"
+  }
+}

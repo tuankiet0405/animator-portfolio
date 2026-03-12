@@ -1,0 +1,62 @@
+/**
+ * Device Mockup CSS — Styles for Browser and iPhone frames
+ */
+
+.device-mockup {
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard-lg);
+  overflow: hidden;
+  background: var(--card-bg);
+  transition: box-shadow 0.3s var(--ease-smooth), transform 0.3s var(--ease-smooth);
+}
+
+.device-mockup:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hard-xl);
+}
+
+/* Browser Frame */
+.device-mockup--browser {
+  border-radius: 8px 8px 0 0;
+}
+
+.device-mockup__bar {
+  display: block;
+  width: 100%;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.device-mockup__screen {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary);
+}
+
+/* iPhone Frame */
+.device-mockup--iphone {
+  border-radius: 24px;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.device-mockup__notch {
+  display: block;
+  width: 100%;
+}
+
+.device-mockup__screen--iphone {
+  aspect-ratio: 9 / 16;
+  min-height: 400px;
+}
+
+.device-mockup__home-indicator {
+  width: 120px;
+  height: 5px;
+  background: var(--text-primary);
+  border-radius: var(--radius-pill);
+  margin: var(--space-1) auto var(--space-2);
+  opacity: 0.3;
+}
